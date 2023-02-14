@@ -56,3 +56,26 @@ main {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+.CTA {
+  display: flex;
+  align-items: center;
+}
+.CTA input {
+  padding: 1em 3.5em;
+}
+.CTA button {
+  width: 100px;
+  height: 50px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media  screen and (max-width: 375px) {
+  .CTA {
+    flex-direction: column;
+  }
+}
