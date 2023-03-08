@@ -1,31 +1,29 @@
 :root {
+/* Colors */
 
-  ## Colors
+/* Primary */
 
-### Primary
+--Blue: hsl (223, 87%, 63%)
 
---Blue: hsl(223, 87%, 63%)
+/* Secondary */
 
-### Secondary
+--PaleBlue: hsl(223, 100%, 88%);
+--LightRed: hsl(354, 100%, 66%);
 
---Pale Blue: hsl(223, 100%, 88%)
---Light Red: hsl(354, 100%, 66%)
+/* Neutral */
 
-### Neutral
+--Gray: hsl(0, 0%, 59%);
+--VeryDarkBlue: hsl(209, 33%, 12%);
+/* Typography */
 
---Gray: hsl(0, 0%, 59%)
---Very Dark Blue: hsl(209, 33%, 12%)
+/* Body Copy */
 
-## Typography
+--Font: 20px;
 
-### Body Copy
+/* Fonts */
 
---Font: 20px
-
-### Fonts
-
-- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
-- Weights: 300, 600, 700
+--Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin);
+/* - Weights: 300, 600, 700 */
 }
 
 body {
@@ -44,28 +42,52 @@ main {
   width: 60%;
   max-width: 800px;
 }
-
-.illustration {
-    height: 500px;
+.title {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--Gray);
+  margin: 1rem;
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.title-highlight {
+  font-weight: 700;
+  color: black;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.subheading {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
 }
 .CTA {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.CTA label {
+  display: none;
 }
 .CTA input {
-  padding: 1em 3.5em;
+  padding: 0.9rem 5rem;
+  border: 1px solid var(--VeryDarkBlue);
+  border-radius: 30px;
+  display: flex;
 }
-.CTA button {
-  width: 100px;
-  height: 50px;
+
+.CTA a {
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 2px 2px 6px -3px black;
+  border: 1px solid var(--VeryDarkBlue);
+  background-color: skyblue;
+  width: 100%;
+  padding: 0.9rem 3.5rem;
+}
+.illustration {
+    height: 300px;
 }
 
 footer {
@@ -73,7 +95,23 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
+footer .icons *{
+  /* border: 1px solid var(--Gray); */
+  border-radius: 30px;
+  padding: 0.25rem;
+  box-shadow: 2px 2px 6px -3px black;
+}
+.copyright-section {
+  font-size: 12px;
+  color: var(--Gray);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 @media  screen and (max-width: 375px) {
   .CTA {
     flex-direction: column;
