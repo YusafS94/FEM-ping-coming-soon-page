@@ -1,36 +1,36 @@
 :root {
-/* Colors */
+  /* Colors */
 
-/* Primary */
+  /* Primary */
 
---Blue: hsl (223, 87%, 63%)
+  --Blue: hsl(223, 87%, 63%);
 
-/* Secondary */
+  /* Secondary */
 
---PaleBlue: hsl(223, 100%, 88%);
---LightRed: hsl(354, 100%, 66%);
+  --PaleBlue: hsl(223, 100%, 88%);
+  --LightRed: hsl(354, 100%, 66%);
 
-/* Neutral */
+  /* Neutral */
 
---Gray: hsl(0, 0%, 59%);
---VeryDarkBlue: hsl(209, 33%, 12%);
-/* Typography */
+  --Gray: hsl(0, 0%, 59%);
+  --VeryDarkBlue: hsl(209, 33%, 12%);
+  /* Typography */
 
-/* Body Copy */
+  /* Body Copy */
 
---Font: 20px;
+  --Font: 20px;
 
-/* Fonts */
+  /* Fonts */
 
---Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin);
-/* - Weights: 300, 600, 700 */
+  --Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin);
+  /* - Weights: 300, 600, 700 */
 }
 
 body {
   margin: 0;
   padding: 0;
   font-size: var(--Font);
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 main {
@@ -41,6 +41,10 @@ main {
   margin: 0 auto;
   width: 60%;
   max-width: 800px;
+}
+.logo {
+  margin: 4rem auto 1rem auto;
+  width: 60px;
 }
 .title {
   font-size: 40px;
@@ -62,32 +66,49 @@ main {
 .CTA {
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-bottom: 4rem;
 }
 .CTA label {
   display: none;
 }
-.CTA input {
+.CTA form {
+  display: flex;
+  gap: 1rem;
+}
+.CTA form input {
   padding: 0.9rem 5rem;
   border: 1px solid var(--VeryDarkBlue);
   border-radius: 30px;
-  display: flex;
+}
+#email:invalid {
+  border: 2px solid red;
 }
 
-.CTA a {
+#email:invalid::after {
+  content: "Please enter a valid email address.";
+  display: block;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.CTA #submit {
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
   border-radius: 30px;
-  box-shadow: 2px 2px 6px -3px black;
-  border: 1px solid var(--VeryDarkBlue);
-  background-color: skyblue;
+  box-shadow: 2px 2px 6px -3px var(--Blue);
+  border: 1px solid var(--Blue);
+  background-color: var(--Blue);
+  color: white;
   width: 100%;
   padding: 0.9rem 3.5rem;
 }
+.CTA #submit:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
 .illustration {
-    height: 300px;
+  height: 350px;
 }
 
 footer {
@@ -95,11 +116,18 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-footer .icons *{
+footer .icons * {
   /* border: 1px solid var(--Gray); */
+  font-size: 15px;
   border-radius: 30px;
-  padding: 0.25rem;
-  box-shadow: 2px 2px 6px -3px black;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 6px -3px black;
+  color: var(--Blue);
+}
+footer .icons *:hover {
+  background-color: var(--Blue);
+  color: white;
+  cursor: pointer;
 }
 .copyright-section {
   font-size: 12px;
@@ -112,7 +140,7 @@ footer .icons *{
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media  screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
   .CTA {
     flex-direction: column;
   }

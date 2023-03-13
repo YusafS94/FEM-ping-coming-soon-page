@@ -10,6 +10,7 @@
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
+      class="logo"
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,9 +27,11 @@
       <h1 class="title">We are launching <span class="title-highlight">soon!</span></h1>
       <p class="subheading">Subscribe and get notified</p>
       <div class="CTA">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Your email address..." />
-        <a href="#">Notify Me</a>
+        <form action="" method="GET">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your email address..." required/>
+          <input id="submit" name="submitBtn" type="submit" value="Notify Me"></input>
+        </form>
       </div>
       <br />
       <img
